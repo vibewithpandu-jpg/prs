@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Floating Light Animation */
+/* Strong visible light animation */
+.light-bar {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: moveLight 5s linear infinite;
+}
+
+@keyframes moveLight {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 120%;
+  }
+}
